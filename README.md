@@ -1,4 +1,2 @@
-# So
-Cliente SSH Túnnel, simples e rápido.
-
 # jx
+SSH SSL SLOW DNS TUNNNEL ChadDevz
