@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_height="match_parent"
+	android:layout_gravity="center"
+	android:gravity="center"
+	android:padding="10dp">
+
+	<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="5dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Server Name Indication (SNI) :"
+				android:textStyle="bold"
+				android:textSize="20sp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/fragment_custom_sni"
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:inputType="text"
+						android:ems="10"
+						android:textColor="@color/colorText"
+						android:hint="Server Name Indication (SNI)"
+						android:singleLine="true"/>
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="right|center"
+			android:layout_marginTop="5dp"
+			android:padding="5dp">
+
+			<Button
+				android:id="@+id/fragment_sni_remoteCancelButton"
+				android:layout_height="42dp"
+				android:layout_width="wrap_content"
+				android:text="@string/cancel"
+				android:foreground="?android:attr/selectableItemBackground"
+				android:textColor="@color/colorText"
+				android:layout_marginRight="10dp"
+				android:background="@android:color/transparent"/>
+
+			<Button
+				android:id="@+id/fragment_sni_remoteSaveButton"
+				android:layout_height="42dp"
+				android:layout_width="wrap_content"
+				android:text="@string/save"
+				android:foreground="?android:attr/selectableItemBackground"
+				android:textColor="@color/colorText"
+				android:background="@android:color/transparent"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

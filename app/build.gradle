@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    signingConfigs {
+        release {
+            keyAlias 'hirodev'
+            keyPassword 'hiro'
+            storeFile file('../key/hiro.keystore')
+            storePassword 'hiro'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    defaultConfig {
+        applicationId "com.chadx.sockshttp"
+		minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 4
+        versionName "4"
+    }
+            buildTypes {
+                release {
+                    minifyEnabled true
+                    shrinkResources true
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                    signingConfig signingConfigs.release
+                }
+    }
+
+compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+}
+
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError true
+    }
+}
+}
+dependencies {
+	
+    api 'com.github.kimchangyoun:rootbeerFresh:+'
+	
+	implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.preference:preference:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'net.i2p.crypto:eddsa:0.3.0'
+    implementation 'org.connectbot.jbcrypt:jbcrypt:1.0.0'
+    implementation 'com.google.android.gms:play-services-ads-lite:11.8.0'
+}
+
+
+
+
+
+
+

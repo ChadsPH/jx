@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miCopyLogs"
+        android:title="Copy Logs"/>
+
+    <item
+        android:id="@+id/miLimparLogs"
+        android:title="Clear Logs"/>
+
+</menu>
+

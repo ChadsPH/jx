@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:title="General">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+					android:id="@+id/miPaygen"
+					android:icon="@drawable/ic_payload"
+					android:title="Payload Generator"/>
+
+				<item
+					android:id="@+id/exit"
+					android:icon="@drawable/ic_radio_tower"
+					android:title="Radio Network"/>
+
+				<item android:id="@+id/miSettings"
+					android:icon="@drawable/ic_settings"
+					android:title="Settings"/>
+            </group>
+        </menu>
+    </item>
+
+	<item android:title="Tunnel">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/miCheckIP"
+					android:icon="@drawable/ic_cloud_outline"
+					android:title="SSH Settings"/>
+
+            </group>
+        </menu>
+    </item>
+
+	<item android:title="More">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/jabol2"
+					android:icon="@drawable/ic_fingerprint"
+					android:title="Hardware ID"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>
+

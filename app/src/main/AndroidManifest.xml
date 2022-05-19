@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    package="com.chadx.sockshttp">
+
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.chadx.injector.MainApp"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+		android:extractNativeLibs="true"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name="com.chadx.injector.LauncherActivity" >
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+		
+		<activity android:name="com.chadx.injector.errors"/>
+			
+		<activity android:name="com.chadx.injector.util.MyIP_Address"
+            android:theme="@style/AppTheme"/>
+		
+		<activity android:name="com.chadx.injector.preference.SettingsSSHPreference"
+            />
+		
+		<!--<activity android:name="com.chadx.injector.HostChecker"
+			android:windowSoftInputMode="adjustPan"
+			android:launchMode="singleTask"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+			android:parentActivityName="com.chadx.injector.a"
+            android:label="Host Checker"/>-->
+		
+		<activity
+            android:name="com.chadx.injector.ChadXLogger"
+            android:parentActivityName="com.chadx.injector.a"
+            android:label="Logs"/>
+			
+		<activity
+            android:name="com.chadx.injector.adapter.TunnelActivity"
+			android:parentActivityName="com.chadx.injector.a"
+            android:label="@string/app_name"/>
+
+        <activity
+            android:name="com.chadx.injector.a"
+            android:label="@string/app_name"/>
+		
+		<activity android:name="com.services.util.DummyActivity"/>
+
+        <activity
+            android:name="com.chadx.injector.activities.ConfigGeralActivity"
+            android:parentActivityName="com.chadx.injector.a"
+            android:label="@string/settings"/>
+
+        <activity
+            android:name="com.chadx.injector.activities.ConfigImportFileActivity"
+            android:grantUriPermissions="true"
+            android:parentActivityName="com.chadx.injector.a"
+            android:label="@string/settings_import">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="file"/>
+
+                <data android:scheme="content"/>
+
+                <data android:mimeType="*/*"/>
+
+                <data android:host="*"/>
+
+                <data android:port="*"/>
+
+                <data android:pathPattern=".*.pcx"/>
+
+                <data android:pathPattern=".*..*.pcx"/>
+
+                <data android:pathPattern=".*..*..*.pcx"/>
+
+                <data android:pathPattern=".*..*..*..*.pcx"/>
+
+                <data android:pathPattern=".*..*..*..*..*.pcx"/>
+
+                <data android:pathPattern=".*..*..*..*..*..*.pcx"/>
+
+                <data android:pathPattern=".*..*..*..*..*..*..*.pcx"/>
+
+            </intent-filter>
+
+        </activity>
+		
+		<activity android:name="com.chadx.injector.CustomDNS"
+			android:parentActivityName="com.chadx.injector.a"
+            android:label="Set DNS"/>
+
+        <activity
+            android:name="com.chadx.injector.activities.ConfigExportFileActivity"
+            android:parentActivityName="com.chadx.injector.a"
+            android:label="@string/settings_export"/>
+
+        <activity
+            android:name="com.chadx.injector.activities.AboutActivity"
+            android:parentActivityName="com.chadx.injector.a"
+            android:label="@string/about"/>
+		
+		<activity 
+			android:name="com.services.LaunchVpn"
+			android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.services.LaunchVPN"
+			android:theme="@style/AppTheme" 
+			android:label="@string/app_name">
+			
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+		<receiver
+			android:name="com.services.MainReceiver">
+			<intent-filter>
+				<action
+					android:name="com.services.MainReceiver.ACTION_SERVICE_STOP">
+				</action>
+				<action
+					android:name="com.services.MainReceiver.ACTION_SERVICE_RESTART">
+				</action>
+			</intent-filter>
+		</receiver>
+
+
+		<!--- Services -->
+		<service android:label="HTTP Ajax"
+			android:name="com.services.tunnel.vpn.TunnelVpnService"
+			android:exported="false"
+			android:enabled="true"
+			android:permission="android.permission.BIND_VPN_SERVICE">
+			<intent-filter>
+				<action android:name="android.net.VpnService"/>
+			</intent-filter>
+		</service>
+
+		<service android:label="HTTP Ajax Service"
+			android:name="com.services.InjectorService"
+			android:stopWithTask="false"
+			android:exported="false">
+		</service>
+		
+		<service android:label="HTTP Ajax Service"
+			android:name="com.services.MainService"
+			android:stopWithTask="false"
+			android:exported="false">
+		</service>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+
+    </application>
+
+</manifest>
+

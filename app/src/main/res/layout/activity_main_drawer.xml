@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/drawer"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_height="match_parent">
+
+		<com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:tabIndicatorHeight="3.0dip"
+			app:tabMode="fixed"
+			app:tabTextAppearance="@style/TabTitleTheme">
+
+			<androidx.appcompat.widget.Toolbar
+				android:id="@+id/toolbar_main"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+				app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+			
+
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#FFFFFF"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:text="HTTP " />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:textColor="@color/colorAccent"
+						android:text="Ajax" />
+
+				</LinearLayout>
+				
+			</androidx.appcompat.widget.Toolbar>
+			<com.google.android.material.tabs.TabLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:minHeight="?attr/actionBarSize"
+				app:tabTextColor="#FFFFFF"
+				app:tabGravity="fill"
+				android:id="@+id/tablayout"
+				app:tabTextAppearance="@style/TabTitleTheme"/>
+
+		</com.google.android.material.appbar.AppBarLayout>
+
+		<androidx.viewpager.widget.ViewPager
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/viewpager">
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:gravity="center"
+				android:id="@+id/tab1">
+
+				<include
+					layout="@layout/activity_main"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/tab2"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:padding="6dp">
+
+				<include
+					layout="@layout/activity_logs"/>
+
+			</LinearLayout>
+			
+			<LinearLayout
+				android:id="@+id/tab3"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:padding="6dp">
+
+				<include
+					layout="@layout/help"/>
+
+			</LinearLayout>
+
+		</androidx.viewpager.widget.ViewPager>
+
+	</LinearLayout>
+
+	<com.google.android.material.navigation.NavigationView
+		android:layout_width="250dp"
+		android:layout_height="match_parent"
+		android:id="@+id/navigation"
+		app:headerLayout="@layout/nav_header"
+		app:itemIconTint="?colorAccent"
+		android:layout_gravity="start"
+		app:menu="@menu/navigation_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:id="@+id/activity_mainLinearLayout"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp">
+
+			<Button
+				android:layout_width="match_parent"
+				style="?android:attr/buttonStyleSmall"
+				android:layout_height="wrap_content"
+				android:text="Start"
+				android:textStyle="bold"
+				android:background="@drawable/button_bg"
+				android:id="@+id/activity_starterButtonMain"/>
+
+		</LinearLayout>
+
+		<androidx.cardview.widget.CardView
+			xmlns:card_view="http://schemas.android.com/apk/res-auto"
+			android:foreground="?android:selectableItemBackground"
+			android:id="@+id/layoutTunnelType"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_width="fill_parent"
+			card_view:cardCornerRadius="5.0dip"
+			android:onClick="tunnelz">
+
+			<LinearLayout
+				android:gravity="center|left"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:padding="10dp">
+
+				<ImageView
+					android:layout_height="25dp"
+					android:layout_width="25dp"
+					android:src="@drawable/ic_matrix"/>
+
+				<TextView
+					android:layout_marginLeft="5.0dip"
+					android:gravity="left"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0"
+					android:layout_width="wrap_content"
+					android:text="haha"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:id="@+id/activitymainTextView1"/>
+
+				<LinearLayout
+					android:gravity="left|right"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginLeft="15dp">
+
+					<ImageView
+						android:layout_height="25dp"
+						android:layout_marginLeft="5dp"
+						android:layout_weight="1.0"
+						android:layout_width="25dp"
+						android:src="@drawable/ic_right"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:card_view="http://schemas.android.com/apk/res-auto"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			card_view:cardCornerRadius="5.0dip"
+			android:id="@+id/activity_mainInputPayloadLinearLayout"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="5dp">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:id="@+id/payload_menu"
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:padding="10dp">
+
+					<com.google.android.material.textfield.TextInputLayout
+						style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+						android:layout_width="match_parent"
+						android:id="@+id/tiPayloadLayout"
+						app:backgroundTint="?colorAccent"
+						android:layout_marginTop="5dp"
+						android:hint="Payload"
+						android:layout_height="wrap_content">
+
+						<com.google.android.material.textfield.TextInputEditText
+							android:layout_width="match_parent"
+							android:ems="10"
+							android:autoLink="none"
+							android:maxLength="2000"
+							app:backgroundTint="?colorAccent"
+							android:inputType="textMultiLine|textNoSuggestions"
+							android:singleLine="true"
+							android:layout_height="wrap_content"
+							android:id="@+id/etPayload"
+							android:maxLines="5"/>
+
+					</com.google.android.material.textfield.TextInputLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/ViewGone1"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="5dp"
+			android:foreground="?android:selectableItemBackground"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="5.0dp"
+			android:layout_marginBottom="5dp">
+
+			<LinearLayout
+				android:id="@+id/activity_mainProxyLayout"
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp"
+				android:gravity="center">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Remote Proxy"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="HTTP Proxy (eg: Squid, Websocket)"
+						android:id="@+id/activity_mainProxyText"/>
+
+				</LinearLayout>
+
+				<ImageView
+					android:src="@drawable/ic_edit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/ViewGone"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="5dp"
+			android:foreground="?android:selectableItemBackground"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="5.0dp"
+			android:layout_marginBottom="5dp">
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp"
+				android:gravity="center">
+
+				<LinearLayout
+					android:id="@+id/cmods_snilayout"
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="Server Name Indication (SNI)"/>
+
+					<TextView
+						android:id="@+id/cmods_snitext"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="@string/no_value"/>
+
+				</LinearLayout>
+
+				<ImageView
+					android:src="@drawable/ic_edit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/newsLayout"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:onClick="hype"
+			android:foreground="?android:selectableItemBackground"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="5.0dp"
+			android:layout_marginTop="5dp">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:padding="5dp"
+				android:gravity="center|left"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:layout_height="25dp"
+					android:layout_width="25dp"
+					android:src="@drawable/et"/>
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_marginLeft="5dp"
+					android:id="@+id/tvUpdateTitle"
+					android:text="Read Updates"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:card_view="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/activity_mainMensagemConfigLinearLayout"
+			android:foreground="?android:selectableItemBackground"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_width="fill_parent"
+			card_view:cardCornerRadius="5.0dip"
+			android:layout_marginTop="5dp">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="fill_parent"
+				android:orientation="vertical"
+				android:padding="10dp">
+
+				<TextView
+					android:autoLink="web"
+					android:id="@+id/activity_mainMensagemConfigTextView"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="5dp"
+			android:gravity="center"
+			android:visibility="gone"
+			android:id="@+id/adView"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:gravity="left"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="5dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginRight="10dp"
+		android:visibility="gone">
+
+		<androidx.cardview.widget.CardView
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			app:cardCornerRadius="2.0dip"
+			app:cardElevation="2.0dip"
+			android:id="@+id/activity_mainMetodoConexaoLayout"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:padding="5dp"
+			android:visibility="gone">
+
+			<LinearLayout
+				android:gravity="center"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/activity_mainMetodoConexaoText"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/method_connection"
+					android:textStyle="bold"/>
+
+				<RadioGroup
+					android:breakStrategy="balanced"
+					android:gravity="center"
+					android:id="@+id/activity_mainMetodoConexaoRadio"
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal">
+
+					<androidx.appcompat.widget.AppCompatRadioButton
+						android:hint="Direct"
+						android:id="@+id/activity_mainSSHDirectRadioButton"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:padding="2dp"
+						android:textSize="12sp"/>
+
+					<androidx.appcompat.widget.AppCompatRadioButton
+						android:hint="SSH/Proxy"
+						android:id="@+id/activity_mainSSHProxyRadioButton"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:padding="2dp"
+						android:textSize="12sp"/>
+
+					<androidx.appcompat.widget.AppCompatRadioButton
+						android:hint="SSL/TLS"
+						android:id="@+id/activity_mainSSLProxyRadioButton"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:padding="2dp"
+						android:textSize="12sp"/>
+
+					<androidx.appcompat.widget.AppCompatRadioButton
+						android:hint="SSL/Payload"
+						android:id="@+id/activity_mainSSLPayloadRadioButton"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:padding="2dp"
+						android:textSize="12sp"/>
+
+				</RadioGroup>
+
+				<LinearLayout
+					android:layout_gravity="left"
+					android:layout_height="wrap_content"
+					android:layout_width="fill_parent"
+					android:orientation="vertical">
+
+					<CheckBox
+						android:hint="Custom Payload"
+						android:id="@+id/activity_mainCustomPayloadSwitch"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<CheckBox
+			android:buttonTint="@color/white"
+			android:id="@+id/useDns"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="DNS (Google DNS)"/>
+
+		<CheckBox
+			android:buttonTint="@color/white"
+			android:id="@+id/startSSHCheckbox"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_width="wrap_content"
+			android:text="Start SSH"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

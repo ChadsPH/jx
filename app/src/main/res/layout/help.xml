@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+
+		<androidx.cardview.widget.CardView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/headerLayout"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="5.0dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="HTTP Ajax is a professional VPN tool to browse the internet privately and securely with multiple protocol and tunneling technologies built into one app."/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="It works as an universal SSH, Proxy, SSL to encrypts your connection so  that you can surf the internet privately and securely."
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="It also helps you access blocked websites behind a firewall. Best part? You will be able to configure your own server and connect using this app."
+					android:layout_marginTop="10dp"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="5.0dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="About"
+					android:textStyle="bold"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Supported placeholder: [method] [host_port] [ssh] [host] [port] [protocol] [crlf] [cr] [lf] [lfcr] [ua] [random=*;] [rotate=*;] [split] [delay_split]"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Developer Home"
+					android:textStyle="bold"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="ChadDevz"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://www.facebook.com/adik016"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Credits"
+					android:layout_marginTop="10dp"
+					android:textStyle="bold"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="SocksHttp - SlipkHunter"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://github.com/sauceisgood/sockshttp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="ASDev"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://www.facebook.com/marcpelobello15"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="HiroDevz Koreano"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://www.facebook.com/HirooQt"/>
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="John Cacanog"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://www.facebook.com/Kentjcacanog1121"/>
+
+
+                <TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="AwooPH"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://www.facebook.com/aawoo.ph"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:layout_height="wrap_content"
+			app:cardCornerRadius="5.0dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Third Party Software"
+					android:textStyle="bold"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="JSocks v1.0.1"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://jsocks.sourceforge.net"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Trilead SSH-2 Build 217"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:autoLink="web"
+					android:text="https://github.com/jenkinsci/trilead-ssh2"/>
+
+			</LinearLayout>
+
+		</androidx.cardview.widget.CardView>
+
+	</LinearLayout>
+	
+	
+</ScrollView>
+
+
